@@ -1,4 +1,4 @@
-package w3resource.javaBasics;
+package w3resource.Part1;
 
 import java.util.Scanner;
 

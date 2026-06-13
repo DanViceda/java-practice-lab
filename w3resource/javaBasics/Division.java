@@ -11,7 +11,7 @@ package w3resource.javaBasics;
  */
 import java.util.Scanner;
 
-public class Part1_Exercise3 {
+public class Division {
 
     public static void main(String[] args) {
         

@@ -11,7 +11,7 @@ package w3resource.javaBasics;
  */
 import java.util.Scanner;
 
-public class Part1_Exercise4 {
+public class ArithmeticOperations {
     public static void main(String[] args) {
         Scanner input = new Scanner (System.in);
         System.out.println("===== EXERCISE 4: ARITHMETIC OPERATIONS\n");

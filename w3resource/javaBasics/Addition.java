@@ -11,19 +11,21 @@ package w3resource.javaBasics;
  */
 import java.util.Scanner;
 
-public class Part1_Exercise1 {
+public class Addition {
     public static void main(String[] args) {
         
         Scanner input = new Scanner (System.in);
-        System.out.println("===== EXERCISE 1: HELLO AND NAME PRINTER\n");
+        System.out.println("===== EXERCISE 2: SUM OF TWO NUMBERS\n");
         
-        System.out.print("Enter your first name: ");
-        String firstName = input.nextLine();
+        System.out.print("Enter First Number: ");                
+        int numOne = input.nextInt();
+
+        System.out.print("Enter Second Number: ");          
+        int numTwo = input.nextInt();
         
-        System.out.print("Enter your last name: ");
-        String lastName = input.nextLine();
+        int sum = numOne + numTwo;
         
         System.out.println();
-        System.out.println("Hello\n" + firstName + " " + lastName );
+        System.out.println("The sum of " + numOne + " + " + numTwo + " = " + sum);
     }
 }

@@ -28,10 +28,11 @@ public class BankAccount {
         return accountHolder;
     }
 
+    // Setters with validation
     public void setAccountHolder(String accountHolder) {
-        if (accountHolder.isEmpty()){
-            System.out.println("Account holder can't be empty!");
-        }else{
+        if (accountHolder == null || accountHolder.trim().isEmpty()) {
+            System.out.println("Account holder cannot be empty.");
+        } else {
             this.accountHolder = accountHolder;
         }
     }
@@ -41,9 +42,9 @@ public class BankAccount {
     }
 
     public void setAccountNumber(int accountNumber) {
-        if (accountNumber > 0){
+        if (accountNumber > 0) {
             this.accountNumber = accountNumber;
-        }else{
+        } else {
             System.out.println("Account Number can't be negative! ");
         }
     }
@@ -59,4 +60,27 @@ public class BankAccount {
             System.out.println("Balance can't be negative numbers!");
         }
     }
+
+    // Deposit Method
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposit successful!");
+        } else {
+            System.out.println("Invalid deposit amount.");
+        }
+    }
+
+    // Withdraw Method
+    public void withdraw(double amount) {
+        if (amount <= 0) {
+            System.out.println("Invalid withdrawal amount.");
+        } else if (amount > balance) {
+            System.out.println("Insufficient balance.");
+        } else {
+            balance -= amount;
+            System.out.println("Withdrawal successful!");
+        }
+    }
+
 }

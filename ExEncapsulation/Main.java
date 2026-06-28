@@ -30,7 +30,6 @@ public class Main {
         System.out.print("Enter Balance: ");
         double balance = input.nextDouble();
 
-        
         account = new BankAccount(accHolder, accNumber, balance);
         System.out.println("\n\nLogin Successfully!\n");
 
@@ -38,6 +37,19 @@ public class Main {
         System.out.println("Account Holder: " + account.getAccountHolder());
         System.out.println("Account Number: " + account.getAccountNumber());
         System.out.println("Balance: " + account.getBalance());
+
         
+        System.out.print("Enter Deposit Amount: ");
+        double deposit = input.nextDouble();
+        account.deposit(deposit);
+
+        System.out.println("Current Balance: " + account.getBalance());
+
+        System.out.print("\nEnter Withdraw Amount: ");
+        double withdraw = input.nextDouble();
+        account.withdraw(withdraw);
+
+        System.out.println("Current Balance: " + account.getBalance());
+
     }
 }
